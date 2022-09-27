@@ -11,29 +11,34 @@ class CreateMahasiswaTable extends Migration
         $this->forge->addField([
             'id' => [
                 'type'           => 'INT',
-                'constraint'     => 5,
+                'constraint'     => 10,
                 'unsigned'       => true,
                 'auto_increment' => true,
-            ],
-            'npm' => [
-                'type'       => 'VARCHAR',
-                'constraint' => '10',
             ],
             'nama' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '255',
             ],
+            'npm' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '10',
+            ],
             'alamat' => [
-                'type' => 'TEXT',
+                'type'       => 'TEXT',
+                'null' => true,
+            ],
+            'deskripsi' => [
+                'type'       => 'TEXT',
+                'null' => true,
             ],
             'created_at' => [
-                'type'       => 'DATETIME',
-                'null' => 'true',
+                'type' => 'DATETIME',
+                'null' => true,
             ],
-            'update_at' => [
-                'type'       => 'DATETIME',
-                'null' => 'true',
-            ]
+            'updated_at' => [
+                'type' => 'DATETIME',
+                'null' => true,
+            ],
         ]);
         $this->forge->addKey('id', true);
         $this->forge->createTable('mahasiswa');

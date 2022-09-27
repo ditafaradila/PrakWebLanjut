@@ -20,23 +20,17 @@ class Pages extends BaseController
 
         $data['title'] = ucfirst($page); // Capitalize the first letter
 
-        return view('templates/header', $data)
-            . view('pages/' . $page)
-            . view('templates/footer');
+        return view(('pages/' . $page), $data);
     }
     public function home()
     {
         $data['title'] = 'Home';
-        return view('templates/header', $data)
-            . view('pages/home')
-            . view('templates/footer');
+        return view('pages/home', $data);
     }
     public function about()
     {
         $data['title'] = 'About';
-        return view('templates/header', $data)
-            . view('pages/about')
-            . view('templates/footer');
+        return view('pages/about', $data);
     }
     public function mahasiswa()
     {
@@ -45,9 +39,7 @@ class Pages extends BaseController
         $data = ['title' => 'Mahasiswa', 
         'mahasiswa' => $mahasiswa
     ];
-        return view('templates/header', $data)
-            . view('pages/mahasiswa', $data)
-            . view('templates/footer');
+        return view('pages/mahasiswa', $data);
     }
     public function test(){
         dd('test');
