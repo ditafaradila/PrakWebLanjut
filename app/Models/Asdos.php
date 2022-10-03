@@ -4,12 +4,12 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Mahasiswa extends Model
+class Asdos extends Model
 {
-    protected $table            = 'mahasiswa';
+    protected $table            = 'jadwal';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
-    protected $allowedFields    = ['npm', 'nama', 'alamat', 'deskripsi'];
+    protected $allowedFields    = ['jam', 'senin', 'selasa', 'rabu', 'kamis', 'jumat'];
 
     // Dates
     protected $useTimestamps = true;

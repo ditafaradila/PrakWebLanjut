@@ -1,7 +1,7 @@
 <?= $this->extend('template')?>
 <?= $this->section('content') ?>
 
-<h3>Ini halaman about</h3>
-<p>Saya adalah anggota Blackpink</p>
+<h3>Ini halaman Profile</h3>
+<p>Sistem Informasi Asisten Dosen</p>
 
 <?= $this->endSection() ?>
